@@ -26,6 +26,8 @@ public class PlayerCollision : MonoBehaviour
 
         if (collisionInfo.collider.tag == "Obstacle")
         {
+            // Disables movement upon collision with
+            // obstacle
             movement.enabled = false;
         }
     }
