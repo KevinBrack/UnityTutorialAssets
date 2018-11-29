@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
 
+    public PlayerMovement movement;
+
     void OnCollisionEnter(Collision collisionInfo)
     {
         // At first we checked for a name match of
@@ -24,7 +26,7 @@ public class PlayerCollision : MonoBehaviour
 
         if (collisionInfo.collider.tag == "Obstacle")
         {
-            Debug.Log("We hit an obstacle");
+            movement.enabled = false;
         }
     }
 
